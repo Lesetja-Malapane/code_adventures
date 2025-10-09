@@ -22,6 +22,10 @@ let simplifyPath = function (path = "") {
   if (pathDirs.at(-1) == "") {
     pathDirs = pathDirs.slice(0, pathDirs.length - 1);
   }
+  
+  if (pathDirs.join("/") == "") {
+    return "/"
+  }
 
   return pathDirs.join("/");
 };
