@@ -23,7 +23,7 @@ let simplifyPath = function (path = "") {
     pathDirs = pathDirs.slice(0, pathDirs.length - 1);
   }
 
-  return pathDirs;
+  return pathDirs.join("/");
 };
 
 console.log(simplifyPath("/.../a/../b/c/../d/./"));
